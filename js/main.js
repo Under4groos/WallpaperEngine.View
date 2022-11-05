@@ -1,19 +1,23 @@
 $(document).ready(function() {
     main()
 });
-let NAME_APP = "Wallpaper Engine"
 
+function SetElement_onclick(str_name, str_url) {
+    var element_ = document.getElementById(str_name);
 
+    element_.onclick = function() {
 
-// document.querySelectorAll('[id=name]').forEach(element => {
-
-//     console.log(element.id);
-// });
-for (let elem of document.body.children) {
-    if (elem.id == "name") {
-        console.log(element.id);
+        window.open(str_url, '_blank');
     }
+    return element_
 }
+
+let git_ = new github()
+
+git_.Get("https://api.github.com/repos/Under4groos/SmdCompile.view/releases", (data) => {
+    SetElement_onclick("but_view_demo", data[0]["assets"][0]["browser_download_url"])
+});
+
 
 function main() {
 
