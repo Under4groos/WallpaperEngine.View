@@ -3,7 +3,7 @@ class github {
 
     }
     Get(string_url, action) {
-        fetch('https://api.github.com/repos/Under4groos/SmdCompile.view/releases', {
+        fetch(string_url, {
                 headers: new Headers({
                     'User-agent': 'Mozilla/4.0 Custom User Agent'
                 })

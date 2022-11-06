@@ -18,7 +18,7 @@ function main() {
 
     let git_ = new github()
 
-    git_.Get("https://api.github.com/repos/Under4groos/SmdCompile.view/releases", (data) => {
+    git_.Get("https://api.github.com/repos/Under4groos/WallpaperEngine.View/releases", (data) => {
         SetElement_onclick("but_view_demo", data[0]["assets"][0]["browser_download_url"])
     });
 
