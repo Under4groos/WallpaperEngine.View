@@ -2,6 +2,11 @@ body {
     background: #ffffff;
 }
 
+li {
+    list-style-type: none;
+    /* Убираем маркеры */
+}
+
 .img-style {
     width: 400px;
     height: 220px;
