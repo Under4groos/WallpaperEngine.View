@@ -20,6 +20,10 @@ function main() {
 
     git_.Get("https://api.github.com/repos/Under4groos/WallpaperEngine.View/releases", (data) => {
         SetElement_onclick("but_view_demo", data[0]["assets"][0]["browser_download_url"])
+
+
+        lastupdatedate.innerHTML = data[0]["assets"][0]["updated_at"].replace("Z", " ").replace("T", " ");
+
     });
 
     document.getElementById('image')
